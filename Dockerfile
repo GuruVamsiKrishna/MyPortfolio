@@ -1,4 +1,11 @@
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
+FROM centos:latest
+
+MAINTAINER NewstarCorporation
+
+RUN yum -y install httpd
+
+COPY * /var/www/html/
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
