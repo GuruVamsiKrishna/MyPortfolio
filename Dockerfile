@@ -1,11 +1,6 @@
-FROM centos:latest
+FROM nginx
 
-MAINTAINER NewstarCorporation
+MAINTAINER vamsi
 
-RUN yum -y install httpd
+COPY . /usr/share/nginx/html
 
-COPY * /var/www/html/
-
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-
-EXPOSE 80

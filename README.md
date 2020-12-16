@@ -9,4 +9,9 @@ go to ```https://charan1922.github.io/myportfolio/#home ```
 4. Make sure the shell scripts should be created or edited from visual studio not directly on git
 6. Code will run on apache server
 
-
+# Docker images
+1. create a docker build , here nginx is created
+2. create a custom image which shares the directory files to docker container
+3. run docker build -t name .
+4. run the container docker run -d --name contname -p 80:80 name
+5. open up the ports in aws ec2
